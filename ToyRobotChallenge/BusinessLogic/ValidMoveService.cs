@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Options;
 using ToyRobotChallenge.BusinessLogic.interfaces;
 using ToyRobotChallenge.Models;
+using ToyRobotChallenge.Settings;
 
 namespace ToyRobotChallenge.BusinessLogic;
 

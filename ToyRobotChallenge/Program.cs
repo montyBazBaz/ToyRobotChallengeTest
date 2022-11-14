@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ToyRobotChallenge.BusinessLogic;
 using ToyRobotChallenge.BusinessLogic.interfaces;
-using ToyRobotChallenge.Models;
+using ToyRobotChallenge.Settings;
 
 namespace ToyRobotChallenge;
 

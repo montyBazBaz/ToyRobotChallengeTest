@@ -6,6 +6,7 @@ namespace ToyRobotChallenge;
 
 internal class Startup : IHostedService
 {
+    private CancellationTokenSource cts = new CancellationTokenSource();
     public IToyRobotCommandService toyRobotCommandService;
 
     public Startup(IToyRobotCommandService toyRobotCommandService)
@@ -15,13 +16,22 @@ internal class Startup : IHostedService
        
     public Task StartAsync(CancellationToken cancellationToken)
     {
+        Console.WriteLine("Started...");
         Task.Run(() => Start(cancellationToken));
         return Task.CompletedTask;      
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        try
+        {
+            cts.Cancel();
+        }
+        finally
+        {            
+        }
+
+        return Task.CompletedTask;
     }
 
     public void Start(CancellationToken cancellationToken)

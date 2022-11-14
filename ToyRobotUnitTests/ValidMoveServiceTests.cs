@@ -5,6 +5,7 @@ using Moq;
 using ToyRobotChallenge.BusinessLogic;
 using ToyRobotChallenge.BusinessLogic.interfaces;
 using ToyRobotChallenge.Models;
+using ToyRobotChallenge.Settings;
 
 namespace UnitTests;
 
